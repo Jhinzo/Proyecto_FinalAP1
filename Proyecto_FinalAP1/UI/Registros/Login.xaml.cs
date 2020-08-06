@@ -22,6 +22,11 @@ namespace Proyecto_FinalAP1.UI.Registros
             InitializeComponent();
         }
 
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
+        }
+
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
