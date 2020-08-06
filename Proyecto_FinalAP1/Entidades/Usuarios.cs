@@ -9,6 +9,7 @@ namespace Proyecto_FinalAP1.Entidades
     {
         [Key]
         public int UsuarioId { get; set; }
+        public string UserName { get; set; }
         public string NivelUsuario { get; set; }
         public string Contraseña { get; set; }
         public string Nombre { get; set; }
