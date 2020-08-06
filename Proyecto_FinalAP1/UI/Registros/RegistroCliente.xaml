@@ -16,8 +16,8 @@
         <Label x:Name="label2" Content="Numero de Mesa" HorizontalAlignment="Left" Margin="233,174,0,0" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Guardar" HorizontalAlignment="Left" Margin="170,301,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
         <Button x:Name="button1" Content="Limpiar" HorizontalAlignment="Left" Margin="306,301,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-        <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="424,306,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-        <Button x:Name="button3" Content="Buscar" HorizontalAlignment="Left" Margin="557,306,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
+        <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="426,301,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
+        <Button x:Name="button3" Content="Buscar" HorizontalAlignment="Left" Margin="551,301,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
 
     </Grid>
 </Window>
