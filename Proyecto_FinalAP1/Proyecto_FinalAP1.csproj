@@ -1,17 +1,161 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
+	  <StartWorkingDirectory>$(MSbluidProkectDirectory)</StartWorkingDirectory>
+	  
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Agendar.png" />
+    <None Remove="Resources\Anonimo.png" />
+    <None Remove="Resources\Buscar.png" />
+    <None Remove="Resources\Cancelar.png" />
+    <None Remove="Resources\Candado.png" />
+    <None Remove="Resources\Carcular.png" />
+    <None Remove="Resources\Crear.png" />
+    <None Remove="Resources\Devolver.png" />
+    <None Remove="Resources\Documento.png" />
+    <None Remove="Resources\Eliminar.png" />
+    <None Remove="Resources\Entrada.png" />
+    <None Remove="Resources\Entrar.png" />
+    <None Remove="Resources\Fecha.png" />
+    <None Remove="Resources\Guardar.png" />
+    <None Remove="Resources\Home.png" />
+    <None Remove="Resources\Identificacion.png" />
+    <None Remove="Resources\Key.png" />
+    <None Remove="Resources\Lectura.png" />
+    <None Remove="Resources\Libro.png" />
+    <None Remove="Resources\Libros.png" />
+    <None Remove="Resources\Limpiar.png" />
+    <None Remove="Resources\Lista.png" />
+    <None Remove="Resources\Mas.png" />
+    <None Remove="Resources\PrestamoYDevolucion.png" />
+    <None Remove="Resources\Salida.png" />
+    <None Remove="Resources\Usuario.png" />
+    <None Remove="UI\Registros\Candado.png" />
+    <None Remove="UI\Registros\Copia de Restaurant logo - Hecho con PosterMyWall.jpg" />
+    <None Remove="UI\Registros\systemusers_104569.png" />
+    <None Remove="UI\Registros\Usuario.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Agendar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Anonimo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Buscar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cancelar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Candado.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Carcular.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Crear.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Devolver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Documento.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eliminar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Entrada.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Entrar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fecha.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Guardar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Identificacion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Key.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lectura.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Libro.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Libros.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Limpiar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lista.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mas.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PrestamoYDevolucion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Salida.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Usuario.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="BLL\" />
     <Folder Include="DAL\" />
     <Folder Include="Entidades\" />
-    <Folder Include="Properties\" />
-    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="3.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="UI\Registros\Candado.png" />
+    <Resource Include="UI\Registros\Copia de Restaurant logo - Hecho con PosterMyWall.jpg" />
+    <Resource Include="UI\Registros\systemusers_104569.png" />
+    <Resource Include="UI\Registros\Usuario.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

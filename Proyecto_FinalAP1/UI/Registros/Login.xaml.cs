@@ -15,11 +15,16 @@ namespace Proyecto_FinalAP1.UI.Registros
     /// <summary>
     /// Interaction logic for Usuarios.xaml
     /// </summary>
-    public partial class Usuarios : Window
+    public partial class Login: Window
     {
-        public Usuarios()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
