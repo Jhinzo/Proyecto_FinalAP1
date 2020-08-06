@@ -8,8 +8,8 @@
         Title="RegistroCliente" Height="450" Width="800">
     <Grid>
         <Image x:Name="image" Source="/UI/Registros/systemusers_104569.png" Margin="56,33,602,243"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="371,122,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="371,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="371,184,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="371,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="371,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
         <Label x:Name="label" Content="Nombrel" HorizontalAlignment="Left" Margin="233,71,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Apellidol" HorizontalAlignment="Left" Margin="233,118,0,0" VerticalAlignment="Top"/>
