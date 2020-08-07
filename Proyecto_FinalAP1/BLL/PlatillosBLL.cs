@@ -1,7 +1,9 @@
-﻿using Proyecto_FinalAP1.DAL;
+﻿using Microsoft.EntityFrameworkCore;
+using Proyecto_FinalAP1.DAL;
 using Proyecto_FinalAP1.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
