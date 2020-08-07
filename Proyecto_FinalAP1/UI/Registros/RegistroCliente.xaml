@@ -5,19 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_FinalAP1.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroCliente" Height="450" Width="800">
+        Title="RegistroCliente" Height="350" Width="700">
     <Grid>
-        <Image x:Name="image" Source="/UI/Registros/systemusers_104569.png" Margin="56,33,602,243"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="371,184,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="371,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="371,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
-        <Label x:Name="label" Content="Nombrel" HorizontalAlignment="Left" Margin="233,71,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Apellidol" HorizontalAlignment="Left" Margin="233,118,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Numero de Mesa" HorizontalAlignment="Left" Margin="233,174,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Guardar" HorizontalAlignment="Left" Margin="170,301,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-        <Button x:Name="button1" Content="Limpiar" HorizontalAlignment="Left" Margin="306,301,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-        <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="426,301,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-        <Button x:Name="button3" Content="Buscar" HorizontalAlignment="Left" Margin="551,301,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
+        <Image x:Name="image" Source="/UI/Registros/systemusers_104569.png" Margin="44,57,483,112"/>
+        <ComboBox x:Name="NumeroDeMesaComboBox" HorizontalAlignment="Left" Margin="372,209,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
+        <TextBox x:Name="ApellidosTextBox" Text="{Binding Apellidos}" HorizontalAlignment="Left" Margin="372,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
+        <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" HorizontalAlignment="Left" Margin="372,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
+        <Label x:Name="label" Content="Nombre" HorizontalAlignment="Left" Margin="234,119,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Apellidos" HorizontalAlignment="Left" Margin="234,161,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Numero de Mesa" HorizontalAlignment="Left" Margin="234,209,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="187,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="GuardarButton_Click"/>
+        <Button x:Name="LimpiarButton" Content="Limpiar" HorizontalAlignment="Left" Margin="323,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="LimpiarButton_Click"/>
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="443,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="EliminarButton_Click"/>
+        <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="568,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="BuscarButton_Click"/>
+        <Label x:Name="label_Copy" Content="ClienteId" HorizontalAlignment="Left" Margin="234,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ClienteIdTextBox" Text="{Binding ClienteId}" HorizontalAlignment="Left" Margin="372,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
 
     </Grid>
 </Window>

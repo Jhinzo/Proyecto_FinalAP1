@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_FinalAP1.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroUsuario" Height="450" Width="800">
+        Title="RegistroUsuario" Height="550" Width="800">
     <Grid Margin="0,0,-3,-3" RenderTransformOrigin="0.5,0.5">
         <Grid.RenderTransform>
             <TransformGroup>
@@ -16,29 +16,31 @@
             </TransformGroup>
         </Grid.RenderTransform>
         <Label Content="" HorizontalAlignment="Left" Margin="169,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.51,0.535"/>
-        <Image Source="/UI/Registros/systemusers_104569.png" Margin="18,10,616,269"/>
+        <Image Source="/UI/Registros/systemusers_104569.png" Margin="18,10,632,387"/>
         <Label Content="Codigo de Usuario" HorizontalAlignment="Left" Margin="179,23,0,0" VerticalAlignment="Top" Width="119"/>
         <Label Content="Nivel de Usuario" HorizontalAlignment="Left" Margin="184,66,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label" Content="Contraseña" HorizontalAlignment="Left" Margin="184,113,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Confirmar Contraseña" HorizontalAlignment="Left" Margin="184,151,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Nombrel" HorizontalAlignment="Left" Margin="23,191,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Apellidos" HorizontalAlignment="Left" Margin="21,239,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label4" Content="N de Cedula" HorizontalAlignment="Left" Margin="21,292,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label5" Content="Telefono" HorizontalAlignment="Left" Margin="21,341,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label6" Content="Email&#xD;&#xA;" HorizontalAlignment="Left" Margin="23,382,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="315,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top"  Width="256" Height="30"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="315,109,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
-        <TextBox x:Name="textBox2_Copy" HorizontalAlignment="Left" Margin="315,149,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="315,66,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="101,191,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Margin="101,243,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Margin="103,288,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
-        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Margin="101,341,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
-        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Margin="101,388,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
-        <Button x:Name="button" Content="Cancelar" HorizontalAlignment="Left" Margin="616,376,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="button_Click"/>
-        <Button x:Name="button1" Content="Limpiar" HorizontalAlignment="Left" Margin="616,325,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="button1_Click"/>
-        <Button x:Name="button2" Content="Guardar" HorizontalAlignment="Left" Margin="616,226,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="button2_Click"/>
-        <Button x:Name="button3" Content="Buscar" HorizontalAlignment="Left" Margin="616,276,0,0" VerticalAlignment="Top"  Height="42" Width="132"  Click="button3_Click"/>
+        <Label x:Name="label" Content="Contraseña" HorizontalAlignment="Left" Margin="186,147,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Confirmar Contraseña" HorizontalAlignment="Left" Margin="186,185,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Nombrel" HorizontalAlignment="Left" Margin="27,229,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Apellidos" HorizontalAlignment="Left" Margin="25,277,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="N de Cedula" HorizontalAlignment="Left" Margin="25,330,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="Telefono" HorizontalAlignment="Left" Margin="25,379,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="Email&#xD;&#xA;" HorizontalAlignment="Left" Margin="27,420,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UsuarioIdTextBox" HorizontalAlignment="Left" Margin="315,21,0,0" Text="{Binding UsuarioId}" TextWrapping="Wrap" VerticalAlignment="Top"  Width="256" Height="30"/>
+        <PasswordBox x:Name="ContraseñaPasswordBox" HorizontalAlignment="Left" Margin="317,143,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
+        <PasswordBox x:Name="ConfirmarContraseñaPasswordBox" HorizontalAlignment="Left" Margin="317,183,0,0"  VerticalAlignment="Top" Width="256" Height="30"/>
+        <ComboBox x:Name="NivelUsuarioComboBox" ItemsSource="{Binding NivelUsuario}" HorizontalAlignment="Left" Margin="315,66,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
+        <TextBox x:Name="NombreTextBox" HorizontalAlignment="Left" Margin="105,229,0,0" Text="{Binding Nombre}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
+        <TextBox x:Name="ApellidosTextBox" HorizontalAlignment="Left" Margin="105,281,0,0" Text="{Binding Apellidos}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
+        <TextBox x:Name="CedulaTextBox" HorizontalAlignment="Left" Margin="107,326,0,0" Text="{Binding Cedula}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
+        <TextBox x:Name="TelefonoTextBox" HorizontalAlignment="Left" Margin="105,379,0,0" Text="{Binding Telefono}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
+        <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Margin="105,426,0,0" Text="{Binding Email}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="620,414,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="EliminarButton_Click"/>
+        <Button x:Name="LimpiarButton" Content="Limpiar" HorizontalAlignment="Left" Margin="620,363,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="LimpiarButton_Click"/>
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="620,264,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="GuardarButton_Click"/>
+        <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="620,314,0,0" VerticalAlignment="Top"  Height="42" Width="132"  Click="BuscarButton_Click"/>
+        <Label x:Name="label_Copy" Content="Nombre de Usuario" HorizontalAlignment="Left" Margin="186,109,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UserNameTextBox" HorizontalAlignment="Left" Margin="319,105,0,0" Text="{Binding UserName}" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
 
     </Grid>
 </Window>

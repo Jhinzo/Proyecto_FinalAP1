@@ -162,6 +162,8 @@ namespace Proyecto_FinalAP1.BLL
             return Lista;
         }
 
+       
+
         public static bool Validar(string nombreusuario, string clave)
         {
             bool paso = false;
