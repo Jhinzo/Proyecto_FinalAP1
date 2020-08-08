@@ -29,7 +29,7 @@
         <TextBox x:Name="TelefonoTextBox" HorizontalAlignment="Left" Margin="105,379,0,0" Text="{Binding Telefono}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
         <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Margin="105,426,0,0" Text="{Binding Email}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
         <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="620,414,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="EliminarButton_Click"/>
-        <Button x:Name="LimpiarButton" Content="Limpiar" HorizontalAlignment="Left" Margin="620,352,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="LimpiarButton_Click"/>
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="620,352,0,0" VerticalAlignment="Top" Height="42" Width="132" Click="NuevoButton_Click"/>
         <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="620,0,0,0" VerticalAlignment="Center" Height="42" Width="132" Click="GuardarButton_Click"/>
         <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="620,290,0,0" VerticalAlignment="Top"  Height="42" Width="132"  Click="BuscarButton_Click"/>
         <Label x:Name="label_Copy" Content="Nombre de Usuario" HorizontalAlignment="Left" Margin="186,109,0,0" VerticalAlignment="Top"/>
