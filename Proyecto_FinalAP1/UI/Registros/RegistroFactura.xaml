@@ -1,0 +1,36 @@
+﻿<Window x:Class="Proyecto_FinalAP1.UI.Registros.RegistroFactura"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_FinalAP1.UI.Registros"
+        mc:Ignorable="d"
+        Title="RegistroFactura" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="label" Content="Numero de factura" HorizontalAlignment="Left" Margin="82,245,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Sub Total" HorizontalAlignment="Left" Margin="82,282,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Total" HorizontalAlignment="Left" Margin="92,344,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="234,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="234,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="235,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397" TextChanged="textBox2_TextChanged"/>
+        <Label x:Name="label2" Content="Itebis" HorizontalAlignment="Left" Margin="89,313,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="235,241,0,0" VerticalAlignment="Top" Width="397">
+            <Image x:Name="image" Height="100" Width="100"/>
+        </ComboBox>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="196" Margin="292,2,0,0" VerticalAlignment="Top" Width="300" Source="/UI/Registros/Copia de Restaurant logo - Hecho con PosterMyWall.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.693"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Button x:Name="button" Content="Crear" HorizontalAlignment="Left" Margin="111,386,0,0" VerticalAlignment="Top"  Height="38" Width="66"/>
+        <Button x:Name="button1" Content="Guardar" HorizontalAlignment="Left" Margin="248,386,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.004,0.6" Height="38" Width="66"/>
+        <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="400,386,0,0" VerticalAlignment="Top" Height="38" Width="66"/>
+        <Button x:Name="button3" Content="Imprimir" HorizontalAlignment="Left" Margin="550,386,0,0" VerticalAlignment="Top" Height="38" Width="66"/>
+
+    </Grid>
+</Window>
