@@ -34,6 +34,8 @@
         <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="620,290,0,0" VerticalAlignment="Top"  Height="42" Width="132"  Click="BuscarButton_Click"/>
         <Label x:Name="label_Copy" Content="Nombre de Usuario" HorizontalAlignment="Left" Margin="186,109,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="UserNameTextBox" HorizontalAlignment="Left" Margin="319,105,0,0" Text="{Binding UserName}" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
+        <Label  Content="Fecha" HorizontalAlignment="Left" Margin="620,68,0,0" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" Margin="620,105,0,0" VerticalAlignment="Top" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short"  />
 
     </Grid>
 </Window>

@@ -11,6 +11,7 @@ namespace Proyecto_FinalAP1.Entidades
         public int ClienteId { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
-        public int MesaId { get; set; }
+        public DateTime Fecha { get; set; }
+        public int Mesa { get; set; }
     }
 }

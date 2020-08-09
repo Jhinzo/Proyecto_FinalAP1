@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto_FinalAP1.Entidades;
+using Proyecto_FinalAP1.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,25 @@ namespace Proyecto_FinalAP1
     /// </summary>
     public partial class MainWindow : Window
     {
+        Usuarios user = new Usuarios();
+        Login ventana = new Login();
+
         public MainWindow()
         {
             InitializeComponent();
+            ventana.Show();
+            this.Close();
         }
+
+        public MainWindow(Usuarios user)
+        {
+            
+        }
+
+        
+
+        
+
+
     }
 }

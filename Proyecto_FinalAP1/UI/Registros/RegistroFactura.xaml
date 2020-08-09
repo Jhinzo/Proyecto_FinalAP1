@@ -5,19 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Proyecto_FinalAP1.UI.Registros"
         mc:Ignorable="d"
-        Title="RegistroFactura" Height="450" Width="800">
+        Title="RegistroFactura" Height="650" Width="600">
     <Grid>
-        <Label x:Name="label" Content="Numero de factura" HorizontalAlignment="Left" Margin="82,245,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Sub Total" HorizontalAlignment="Left" Margin="82,282,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label4" Content="Total" HorizontalAlignment="Left" Margin="92,344,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="234,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Margin="234,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Margin="235,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="397" TextChanged="textBox2_TextChanged"/>
-        <Label x:Name="label2" Content="Itebis" HorizontalAlignment="Left" Margin="89,313,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="235,241,0,0" VerticalAlignment="Top" Width="397">
-            <Image x:Name="image" Height="100" Width="100"/>
-        </ComboBox>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="196" Margin="292,2,0,0" VerticalAlignment="Top" Width="300" Source="/UI/Registros/Copia de Restaurant logo - Hecho con PosterMyWall.jpg" RenderTransformOrigin="0.5,0.5">
+        <Label x:Name="label" Content="No.Factura" HorizontalAlignment="Left" Margin="41,130,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Sub Total" HorizontalAlignment="Left" Margin="95,430,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Total" HorizontalAlignment="Left" Margin="95,492,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Itebis" HorizontalAlignment="Left" Margin="95,461,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="108" Margin="216,11,0,0" VerticalAlignment="Top" Stretch="Uniform" Width="120" Source="/UI/Registros/Copia de Restaurant logo - Hecho con PosterMyWall.jpg" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -27,10 +21,29 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Button x:Name="button" Content="Crear" HorizontalAlignment="Left" Margin="111,386,0,0" VerticalAlignment="Top"  Height="38" Width="66"/>
-        <Button x:Name="button1" Content="Guardar" HorizontalAlignment="Left" Margin="248,386,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.004,0.6" Height="38" Width="66"/>
-        <Button x:Name="button2" Content="Eliminar" HorizontalAlignment="Left" Margin="400,386,0,0" VerticalAlignment="Top" Height="38" Width="66"/>
-        <Button x:Name="button3" Content="Imprimir" HorizontalAlignment="Left" Margin="550,386,0,0" VerticalAlignment="Top" Height="38" Width="66"/>
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="62,548,0,0" VerticalAlignment="Top"  Height="38" Width="66" Click="NuevoButton_Click"/>
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="180,548,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.004,0.6" Height="38" Width="66" Click="GuardarButton_Click"/>
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="286,548,0,0" VerticalAlignment="Top" Height="38" Width="66" Click="EliminarButton_Click"/>
+        <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="414,548,0,0" VerticalAlignment="Top" Height="38" Width="66" Click="BuscarButton_Click"/>
+        <Label x:Name="labelMesa" Content="Mesa" HorizontalAlignment="Left" Margin="267,178,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelCliente" Content="Cliente" HorizontalAlignment="Left" Margin="43,176,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="FacturaIdTextBox" HorizontalAlignment="Left" Margin="113,134,0,0" Text="{Binding FacturaId}" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="22"/>
+        <ComboBox x:Name="ClienteComboBox" HorizontalAlignment="Left" Margin="110,180,0,0" VerticalAlignment="Top" Width="139"/>
+        <ComboBox x:Name="MesaComboBox" HorizontalAlignment="Left" Margin="321,178,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="labelCliente_Copy" Content="Fecha" HorizontalAlignment="Left" Margin="259,130,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="FechaDatePicker" HorizontalAlignment="Left" Margin="321,132,0,0" VerticalAlignment="Top"/>
+        <DataGrid Margin="83,267,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="128" Width="392">
+
+        </DataGrid>
+        <Label x:Name="labelPlatillo" Content="Plaillo" HorizontalAlignment="Left" Margin="74,217,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="PlatilloComboBox" HorizontalAlignment="Left" Margin="129,219,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label x:Name="labelCantidad" Content="Cantidad" HorizontalAlignment="Left" Margin="286,217,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="CantidadTextBox" HorizontalAlignment="Left" Margin="344,223,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+        <Button x:Name="AgregarButton" Content="Agregar" HorizontalAlignment="Left" Margin="424,223,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="EliminarFilaButton" Content="Eliminar Fila" HorizontalAlignment="Left" Margin="393,400,0,0" VerticalAlignment="Top" Height="16" Width="82"/>
+        <TextBox x:Name="SubTotalTextBox" HorizontalAlignment="Left" Margin="174,434,0,0" Text="{Binding SubTotal}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TotalItbisTextBox" HorizontalAlignment="Left" Margin="174,474,0,0" Text="{Binding TotalItbis}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TotalTextBox" HorizontalAlignment="Left" Margin="174,505,0,0" Text="{Binding Total}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

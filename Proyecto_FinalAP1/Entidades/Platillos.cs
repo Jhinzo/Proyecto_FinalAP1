@@ -9,6 +9,7 @@ namespace Proyecto_FinalAP1.Entidades
     {
         [Key]
         public int PlatilloId { get; set; }
+        public DateTime Fecha { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }
         public int Cantidad { get; set; }

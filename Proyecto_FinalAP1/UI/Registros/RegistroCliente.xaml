@@ -15,11 +15,13 @@
         <Label x:Name="label1" Content="Apellidos" HorizontalAlignment="Left" Margin="234,161,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Numero de Mesa" HorizontalAlignment="Left" Margin="234,209,0,0" VerticalAlignment="Top"/>
         <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="187,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="GuardarButton_Click"/>
-        <Button x:Name="LimpiarButton" Content="Limpiar" HorizontalAlignment="Left" Margin="323,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="LimpiarButton_Click"/>
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="323,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="NuevoButton_Click"/>
         <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="443,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="EliminarButton_Click"/>
         <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="568,278,0,0" VerticalAlignment="Top" Height="30" Width="60" Click="BuscarButton_Click"/>
         <Label x:Name="label_Copy" Content="ClienteId" HorizontalAlignment="Left" Margin="234,72,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="ClienteIdTextBox" Text="{Binding ClienteId}" HorizontalAlignment="Left" Margin="372,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
+        <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short" HorizontalAlignment="Left" Margin="372,27,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="234,33,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

@@ -117,7 +117,25 @@ namespace Proyecto_FinalAP1.BLL
             return Client;
         }
 
-        
+        public static List<Clientes> GetList()
+        {
+            Contexto contexto = new Contexto();
+            List<Clientes> Lista = new List<Clientes>();
+            try
+            {
+                Lista = contexto.Clientes.ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return Lista;
+        }
+
         public static List<Clientes> GetList(Expression<Func<Clientes, bool>> criterio)
         {
             Contexto contexto = new Contexto();

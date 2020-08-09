@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Proyecto_FinalAP1.Entidades
 {
-    class Usuarios
+    public class Usuarios
     {
         [Key]
         public int UsuarioId { get; set; }
@@ -16,6 +16,6 @@ namespace Proyecto_FinalAP1.Entidades
         public string Apellido { get; set; }
         public string Cedula { get; set; }
         public string Telefono { get; set; }
-        public int MyProperty { get; set; }
+        public DateTime Fecha { get; set; }
     }
 }
