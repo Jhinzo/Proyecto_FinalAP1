@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Proyecto_FinalAP1.Entidades
 {
-    class Facturas
+    public class Facturas
     {
         [Key]
         public int FacturaId { get; set; }
@@ -25,7 +25,6 @@ namespace Proyecto_FinalAP1.Entidades
             SubTotal = 0;
             ItbisTotal = 0;
             Total= 0;
-            OrdenDetalle  = new List<Ordenes>();
         }
 
         public Facturas(int facturaId, DateTime fecha, double subTotal, double itbisTotal, double total)

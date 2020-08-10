@@ -23,12 +23,23 @@ namespace Proyecto_FinalAP1.UI.Registros
         public string[] Niveles{get; set; }
         private Entidades.Usuarios usuario = new Entidades.Usuarios();
 
-        public RegistroUsuario()
+        public RegistroUsuario( Usuarios user)
         {
-            InitializeComponent();
-            this.DataContext = usuario;
-            Niveles = new string[] { "Administrador", "Almacenero", "Vendedor", "Tesorero", "Gerente" };
-            NivelUsuarioComboBox.ItemsSource = Niveles;
+            if (user.NivelUsuario == "Cocinero")
+            {
+                MessageBox.Show("Este Usuario no tiene acceso a esta ventana", "Fallo",
+                   MessageBoxButton.OK, MessageBoxImage.Warning);
+                new MainWindow(user).Show();
+                this.Close();
+            }
+            else
+            {
+                InitializeComponent();
+                this.DataContext = usuario;
+                Niveles = new string[] { "Administrador", "Cocinero", "Cajero", "Gerente" };
+                NivelUsuarioComboBox.ItemsSource = Niveles;
+            }
+            
         }
 
         private void Limpiar()
@@ -146,11 +157,11 @@ namespace Proyecto_FinalAP1.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var estudiante = UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
+            var  usr= UsuariosBLL.Buscar(Convert.ToInt32(UsuarioIdTextBox.Text));
 
             if (usuario != null)
             {
-                this.usuario = estudiante;
+                this.usuario = usr;
                 MessageBox.Show("Usuario encontrado", "Exito",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }

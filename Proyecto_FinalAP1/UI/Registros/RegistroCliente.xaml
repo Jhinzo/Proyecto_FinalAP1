@@ -8,7 +8,7 @@
         Title="RegistroCliente" Height="350" Width="700">
     <Grid>
         <Image x:Name="image" Source="/UI/Registros/systemusers_104569.png" Margin="44,57,483,112"/>
-        <ComboBox x:Name="NumeroDeMesaComboBox" HorizontalAlignment="Left" Margin="372,209,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
+        <TextBox x:Name="NumeroDeMesaComboBox" HorizontalAlignment="Left" Margin="372,209,0,0" VerticalAlignment="Top" Width="256" Height="30" Text="{Binding Mesa}"/>
         <TextBox x:Name="ApellidosTextBox" Text="{Binding Apellidos}" HorizontalAlignment="Left" Margin="372,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
         <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" HorizontalAlignment="Left" Margin="372,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
         <Label x:Name="label" Content="Nombre" HorizontalAlignment="Left" Margin="234,119,0,0" VerticalAlignment="Top"/>

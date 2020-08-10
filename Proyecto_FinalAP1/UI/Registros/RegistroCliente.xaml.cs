@@ -20,10 +20,22 @@ namespace Proyecto_FinalAP1.UI.Registros
     public partial class RegistroCliente : Window
     {
         private Clientes Cliente;
-        public RegistroCliente()
+        public RegistroCliente(Usuarios user)
         {
-            InitializeComponent();
-            this.Cliente = new Clientes();
+            if (user.NivelUsuario =="Cocinero")
+            {
+                MessageBox.Show("Este Usuario no tiene acceso a esta ventana", "Fallo",
+                   MessageBoxButton.OK, MessageBoxImage.Warning);
+                new MainWindow(user).Show();
+                this.Close();
+            }
+            else
+            {
+                InitializeComponent();
+                this.Cliente = new Clientes();
+
+            }
+            
         }
 
         private void Limpiar()

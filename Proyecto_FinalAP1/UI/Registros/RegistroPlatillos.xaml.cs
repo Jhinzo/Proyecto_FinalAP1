@@ -20,10 +20,21 @@ namespace Proyecto_FinalAP1.UI.Registros
     public partial class RegistroPlatillos : Window
     {
         Platillos Platillo = new Platillos();
-        public RegistroPlatillos()
+        public RegistroPlatillos( Usuarios usuario)
         {
-            InitializeComponent();
-            this.Platillo = new Platillos();
+            if (usuario.NivelUsuario == "Cajero")
+            {
+                MessageBox.Show("Este Usuario no tiene acceso a esta ventana", "Fallo",
+                   MessageBoxButton.OK, MessageBoxImage.Warning);
+                new MainWindow(usuario).Show();
+                this.Close();
+            }
+            else
+            {
+                InitializeComponent();
+                this.Platillo = new Platillos();
+            }
+            
         }
 
         private void Limpiar()

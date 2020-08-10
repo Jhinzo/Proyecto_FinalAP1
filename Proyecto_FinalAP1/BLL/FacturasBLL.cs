@@ -6,18 +6,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Windows;
 
 namespace Proyecto_FinalAP1.BLL
 {
-    class PlatillosBLL
+    class FacturasBLL
     {
         public static bool Existe(int id)
         {
             Contexto contexto = new Contexto();
+            bool esOk = false;
+            try
+            {
+                esOk = contexto.Facturas.Any(e => e.FacturaId == id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return esOk;
+        }
+
+        public static bool Guardar(Facturas Compra)
+        {
+            return Insertar(Compra);
+        }
+
+        private static bool Insertar(Facturas Factura)
+        {
+            Contexto contexto = new Contexto();
             bool paso = false;
             try
             {
-                paso = contexto.Platillos.Any(e => e.PlatilloId == id);
+                if (contexto.Facturas.Add(Factura) != null) { paso = (contexto.SaveChanges() > 0); }
             }
             catch (Exception)
             {
@@ -30,37 +55,17 @@ namespace Proyecto_FinalAP1.BLL
             return paso;
         }
 
-        public static bool Guardar(Platillos Client)
-        {
-            return Insertar(Client);
-        }
-
-        private static bool Insertar(Platillos Client)
+        public static bool Modificar(Facturas Factura)
         {
             Contexto contexto = new Contexto();
             bool paso = false;
             try
             {
-                if (contexto.Platillos.Add(Client) != null) { paso = (contexto.SaveChanges() > 0); }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return paso;
-        }
-
-        public static bool Modificar(Platillos Client)
-        {
-            Contexto contexto = new Contexto();
-            bool paso = false;
-            try
-            {
-                contexto.Entry(Client).State = EntityState.Modified;
+                contexto.Database.ExecuteSqlRaw($"Delete FROM ProductosDetalle Where TareaId={Factura.FacturaId}");
+                foreach (var item in Factura.OrdenDetalle)
+                {
+                    contexto.Entry(item).State = EntityState.Added;
+                }
                 paso = (contexto.SaveChanges() > 0);
             }
             catch (Exception)
@@ -77,14 +82,14 @@ namespace Proyecto_FinalAP1.BLL
         public static bool Eliminar(int id)
         {
             Contexto contexto = new Contexto();
-            bool paso = false;
+            bool esOk = false;
             try
             {
-                var Client = contexto.Platillos.Find(id);
-                if (Client != null)
+                var Factura = contexto.Facturas.Find(id);
+                if (Factura != null)
                 {
-                    contexto.Platillos.Remove(Client);
-                    paso = (contexto.SaveChanges() > 0);
+                    contexto.Facturas.Remove(Factura);
+                    esOk = (contexto.SaveChanges() > 0);
                 }
             }
             catch (Exception)
@@ -95,16 +100,22 @@ namespace Proyecto_FinalAP1.BLL
             {
                 contexto.Dispose();
             }
-            return paso;
+            return esOk;
         }
 
-        public static List<Platillos> GetList()
+        public static Facturas Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            List<Platillos> Lista = new List<Platillos>();
+            Facturas Compra = new Facturas();
             try
             {
-                Lista = contexto.Platillos.ToList();
+                Compra = contexto.Facturas.Include(x => x.OrdenDetalle)
+                    .Where(x => x.FacturaId == id)
+                    .SingleOrDefault();
+                if (Compra == null)
+                {
+                    MessageBox.Show("Compra no existe.", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
             catch (Exception)
             {
@@ -114,35 +125,16 @@ namespace Proyecto_FinalAP1.BLL
             {
                 contexto.Dispose();
             }
-            return Lista;
-        }
-        public static Platillos Buscar(int id)
-        {
-            Contexto contexto = new Contexto();
-            Platillos Client = new Platillos();
-            try
-            {
-                Client = contexto.Platillos.Find(id);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return Client;
+            return Compra;
         }
 
-
-        public static List<Platillos> GetList(Expression<Func<Platillos, bool>> criterio)
+        public static List<Facturas> GetList(Expression<Func<Facturas, bool>> criterio)
         {
             Contexto contexto = new Contexto();
-            List<Platillos> Lista = new List<Platillos>();
+            List<Facturas> Lista = new List<Facturas>();
             try
             {
-                Lista = contexto.Platillos.Where(criterio).ToList();
+                Lista = contexto.Facturas.Where(criterio).ToList();
             }
             catch (Exception)
             {

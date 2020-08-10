@@ -9,10 +9,32 @@
     <Grid Margin="0,0,0,-6">
         <Menu x:Name="menu">
             <MenuItem Header="Registros">
-                
+                <MenuItem Header="Usuarios" Click="RUsuariosItem_Click">
+                    
+                </MenuItem>
+                <MenuItem Header="Platillos" Click="RPlatillosItem_Click" >
+
+                </MenuItem>
+                <MenuItem Header="Cliente" Click="RClienteItem_Click">
+
+                </MenuItem>
+                <MenuItem Header="Factturas" Click="RFacturasItem_Click">
+
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="Consultas">
-                
+                <MenuItem Header="Usuarios" Click="CUsuariosItem_Click">
+
+                </MenuItem>
+                <MenuItem Header="Platillos" Click="CPlatillosItem_Click" >
+
+                </MenuItem>
+                <MenuItem Header="Cliente" Click="CClienteItem_Click">
+
+                </MenuItem>
+                <MenuItem Header="Factturas" Click="CFacturasItem_Click">
+
+                </MenuItem>
             </MenuItem>
         </Menu>
     </Grid>

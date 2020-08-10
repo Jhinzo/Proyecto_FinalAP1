@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Proyecto_FinalAP1.Entidades
 {
-    class Platillos
+    public class Platillos
     {
         [Key]
         public int PlatilloId { get; set; }

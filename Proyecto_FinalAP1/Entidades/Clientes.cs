@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Proyecto_FinalAP1.Entidades
 {
-    class Clientes
+    public class Clientes
     {
         [Key]
         public int ClienteId { get; set; }
