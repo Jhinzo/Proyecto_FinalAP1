@@ -23,8 +23,7 @@
                 <StackPanel Margin="5,0">
                     <Label Content="Filtro:" />
                     <ComboBox x:Name="FiltroComboBox" Width="100">
-                        <ComboBoxItem Content="EstudianteId"/>
-                        <ComboBoxItem Content="Nombres"/>
+                        
                     </ComboBox>
                 </StackPanel>
 
@@ -44,9 +43,12 @@
             </StackPanel>
             <StackPanel HorizontalAlignment="Left" >
                 <DataGrid x:Name="DatosDataGrid" Height="350" Width="527">
-                    <ColumnDefinition>
-
-                    </ColumnDefinition>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding FacturaId}" Visibility="Visible"/>
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
+                        <DataGridTextColumn Header="Total" Binding="{Binding Total}"/>
+                        
+                    </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
         </StackPanel>

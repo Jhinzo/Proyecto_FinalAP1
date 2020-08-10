@@ -19,19 +19,19 @@ namespace Proyecto_FinalAP1.UI.Consultas
     /// </summary>
     public partial class ConsultaClientes : Window
     {
-        public string[] combo { get; set; }
+        public string[] combo = new string[] { "Todo", "Id", "Nombres", "Apellidos", "Mesa" };
+
 
         public ConsultaClientes( Usuarios user)
         {
             if(user.NivelUsuario=="Administrador"|| user.NivelUsuario == "Gerente")
             {
                 InitializeComponent();
-                combo = new string[] { "Todo", "Id", "Nombres", "Apellidos", "Mesa" };
-                FiltroComboBox.ItemsSource = combo;
+                                FiltroComboBox.ItemsSource = combo;
             }
             else
             {
-                MessageBox.Show("No posee el permiso necesario","Error",MessageBoxButton.OK,MessageBoxImage.Error)
+                MessageBox.Show("No posee el permiso necesario", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }

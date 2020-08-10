@@ -19,7 +19,7 @@ namespace Proyecto_FinalAP1.UI.Registros
     /// </summary>
     public partial class RegistroCliente : Window
     {
-        private Clientes Cliente;
+        Clientes Cliente = new Clientes();
         public RegistroCliente(Usuarios user)
         {
             if (user.NivelUsuario =="Cocinero")
@@ -67,12 +67,23 @@ namespace Proyecto_FinalAP1.UI.Registros
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var Cliente = ClientesBLL.Buscar(Convert.ToInt32(ClienteIdTextBox.Text));
+            var cliente = ClientesBLL.Buscar(Convert.ToInt32(ClienteIdTextBox.Text));
 
-            if (Cliente != null)
-                this.Cliente = Cliente;
+            if (cliente != null)
+            {
+                MessageBox.Show("Cliente encontrado", "Exito",
+                   MessageBoxButton.OK, MessageBoxImage.Information);
+                this.Cliente = cliente;
+                
+            }
+                
             else
-                this.Cliente = new Clientes();
+            {
+                MessageBox.Show("Transaccion Fallida", "Fallo",
+                   MessageBoxButton.OK, MessageBoxImage.Warning);
+
+            }
+                
 
             this.DataContext = this.Cliente;
         }

@@ -32,7 +32,10 @@ namespace Proyecto_FinalAP1.BLL
 
         public static bool Guardar(Platillos Client)
         {
-            return Insertar(Client);
+            if (Client.PlatilloId == 0)
+                return Insertar(Client);
+            else
+                return Modificar(Client);
         }
 
         private static bool Insertar(Platillos Client)

@@ -25,11 +25,9 @@
         <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="180,548,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.004,0.6" Height="38" Width="66" Click="GuardarButton_Click"/>
         <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="286,548,0,0" VerticalAlignment="Top" Height="38" Width="66" Click="EliminarButton_Click"/>
         <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="414,548,0,0" VerticalAlignment="Top" Height="38" Width="66" Click="BuscarButton_Click"/>
-        <Label x:Name="labelMesa" Content="Mesa" HorizontalAlignment="Left" Margin="267,178,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labelCliente" Content="Cliente" HorizontalAlignment="Left" Margin="43,176,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="FacturaIdTextBox" HorizontalAlignment="Left" Margin="113,134,0,0" Text="{Binding FacturaId}" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="22"/>
-        <ComboBox x:Name="ClienteComboBox" SelectedValue="{Binding ClienteId}" HorizontalAlignment="Left" Margin="110,180,0,0" VerticalAlignment="Top" Width="139" />
-        <TextBox x:Name="MesaTextBox"  HorizontalAlignment="Left" Margin="321,178,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="ClienteComboBox" SelectedValue="{Binding ClienteId}" HorizontalAlignment="Left" Margin="110,180,0,0" VerticalAlignment="Top" Width="139"   />
         <Label x:Name="labelCliente_Copy" Content="Fecha" HorizontalAlignment="Left" Margin="259,130,0,0" VerticalAlignment="Top"/>
         <DatePicker x:Name="FechaDatePicker" HorizontalAlignment="Left" Margin="321,132,0,0" VerticalAlignment="Top"/>
         <DataGrid x:Name="FacturaDataGrid" Margin="66,267,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="128" Width="414"  ItemsSource="{Binding OrdenDetalle}" AutoGenerateColumns="False">
@@ -45,9 +43,9 @@
 
         </DataGrid>
         <Label x:Name="labelPlatillo" Content="Plaillo" HorizontalAlignment="Left" Margin="74,217,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="PlatilloComboBox" SelectedValue="{Binding PlatilloId}" HorizontalAlignment="Left" Margin="129,219,0,0" VerticalAlignment="Top" Width="139"/>
+        <ComboBox x:Name="PlatilloComboBox" SelectedValue="{Binding PlatilloId}" HorizontalAlignment="Left" Margin="129,219,0,0" VerticalAlignment="Top" Width="139" SelectionChanged="PlatilloComboBox_SelectionChanged"/>
         <Label x:Name="labelCantidad" Content="Cantidad" HorizontalAlignment="Left" Margin="286,217,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="CantidadTextBox" HorizontalAlignment="Left" Margin="344,223,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
+        <TextBox x:Name="CantidadTextBox" HorizontalAlignment="Left"  Margin="344,223,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="49"/>
         <Button x:Name="AgregarButton" Content="Agregar" HorizontalAlignment="Left" Margin="424,223,0,0" VerticalAlignment="Top"/>
         <Button x:Name="EliminarFilaButton" Content="Eliminar Fila" HorizontalAlignment="Left" Margin="393,400,0,0" VerticalAlignment="Top" Height="16" Width="82"/>
         <TextBox x:Name="SubTotalTextBox" HorizontalAlignment="Left" Margin="174,434,0,0" Text="{Binding SubTotal}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

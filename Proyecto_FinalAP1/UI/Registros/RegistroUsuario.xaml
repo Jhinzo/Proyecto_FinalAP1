@@ -24,7 +24,7 @@
         <PasswordBox x:Name="ConfirmarContraseñaPasswordBox" HorizontalAlignment="Left" Margin="317,183,0,0"  VerticalAlignment="Top" Width="256" Height="30"/>
         <ComboBox x:Name="NivelUsuarioComboBox" ItemsSource="{Binding NivelUsuario}" HorizontalAlignment="Left" Margin="315,66,0,0" VerticalAlignment="Top" Width="256" Height="30"/>
         <TextBox x:Name="NombreTextBox" HorizontalAlignment="Left" Margin="105,229,0,0" Text="{Binding Nombre}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
-        <TextBox x:Name="ApellidosTextBox" HorizontalAlignment="Left" Margin="105,281,0,0" Text="{Binding Apellidos}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
+        <TextBox x:Name="ApellidosTextBox" HorizontalAlignment="Left" Margin="105,281,0,0" Text="{Binding Apellido}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
         <TextBox x:Name="CedulaTextBox" HorizontalAlignment="Left" Margin="107,326,0,0" Text="{Binding Cedula}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
         <TextBox x:Name="TelefonoTextBox" HorizontalAlignment="Left" Margin="105,379,0,0" Text="{Binding Telefono}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>
         <TextBox x:Name="EmailTextBox" HorizontalAlignment="Left" Margin="105,426,0,0" Text="{Binding Email}" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" Height="30"/>

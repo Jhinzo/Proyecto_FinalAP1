@@ -134,6 +134,9 @@ namespace Proyecto_FinalAP1.Migrations
                     b.Property<string>("Contraseña")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
 
@@ -160,7 +163,7 @@ namespace Proyecto_FinalAP1.Migrations
                             Apellido = "Manager",
                             Cedula = "4028907891",
                             Contraseña = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
-                            Fecha = new DateTime(2020, 8, 9, 23, 35, 28, 75, DateTimeKind.Local).AddTicks(7006),
+                            Fecha = new DateTime(2020, 8, 10, 13, 54, 44, 68, DateTimeKind.Local).AddTicks(6930),
                             NivelUsuario = "Administrador",
                             Nombre = "Manager",
                             Telefono = "8099081234",

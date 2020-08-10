@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Proyecto_FinalAP1.Migrations
 {
-    public partial class migracion : Migration
+    public partial class Migracion : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -69,6 +69,7 @@ namespace Proyecto_FinalAP1.Migrations
                     Apellido = table.Column<string>(nullable: true),
                     Cedula = table.Column<string>(nullable: true),
                     Telefono = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
                     Fecha = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
@@ -102,8 +103,8 @@ namespace Proyecto_FinalAP1.Migrations
 
             migrationBuilder.InsertData(
                 table: "Usuarios",
-                columns: new[] { "UsuarioId", "Apellido", "Cedula", "Contraseña", "Fecha", "NivelUsuario", "Nombre", "Telefono", "UserName" },
-                values: new object[] { 1, "Manager", "4028907891", "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92", new DateTime(2020, 8, 9, 23, 35, 28, 75, DateTimeKind.Local).AddTicks(7006), "Administrador", "Manager", "8099081234", "Admin" });
+                columns: new[] { "UsuarioId", "Apellido", "Cedula", "Contraseña", "Email", "Fecha", "NivelUsuario", "Nombre", "Telefono", "UserName" },
+                values: new object[] { 1, "Manager", "4028907891", "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92", null, new DateTime(2020, 8, 10, 13, 54, 44, 68, DateTimeKind.Local).AddTicks(6930), "Administrador", "Manager", "8099081234", "Admin" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ordenes_FacturaId",

@@ -171,7 +171,7 @@ namespace Proyecto_FinalAP1.UI.Registros
         {
             Platillos prod = PlatillosBLL.Buscar(PlatilloComboBox.SelectedIndex);
             Clientes cl = ClientesBLL.Buscar(ClienteComboBox.SelectedIndex);
-            MesaTextBox.Text = cl.Mesa.ToString();
+            
             if (prod != null)
             {
                 prod.Cantidad -= int.Parse(CantidadTextBox.Text); PlatillosBLL.Modificar(prod);
@@ -187,10 +187,12 @@ namespace Proyecto_FinalAP1.UI.Registros
 
         
 
-        private void ClienteComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+       
+
+        private void PlatilloComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Clientes cl = ClientesBLL.Buscar(ClienteComboBox.SelectedIndex);
-            MesaTextBox.Text = cl.Mesa.ToString();
+            Platillos pl = PlatillosBLL.Buscar(PlatilloComboBox.SelectedIndex);
+
         }
     }
 }

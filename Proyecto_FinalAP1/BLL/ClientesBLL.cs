@@ -32,7 +32,13 @@ namespace Proyecto_FinalAP1.BLL
 
         public static bool Guardar(Clientes Client)
         {
-            return Insertar(Client);
+            if (Client.ClienteId == 0)
+            {
+                return Insertar(Client);
+            }
+            else
+                return Modificar(Client);
+            
         }
 
         private static bool Insertar(Clientes Client)
@@ -54,7 +60,7 @@ namespace Proyecto_FinalAP1.BLL
             return paso;
         }
 
-        public static bool Modificar(ClientesBLL Client)
+        public static bool Modificar(Clientes Client)
         {
             Contexto contexto = new Contexto();
             bool paso = false;

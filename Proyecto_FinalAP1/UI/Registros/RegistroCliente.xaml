@@ -10,7 +10,7 @@
         <Image x:Name="image" Source="/UI/Registros/systemusers_104569.png" Margin="44,57,483,112"/>
         <TextBox x:Name="NumeroDeMesaComboBox" HorizontalAlignment="Left" Margin="372,209,0,0" VerticalAlignment="Top" Width="256" Height="30" Text="{Binding Mesa}"/>
         <TextBox x:Name="ApellidosTextBox" Text="{Binding Apellidos}" HorizontalAlignment="Left" Margin="372,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
-        <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}" HorizontalAlignment="Left" Margin="372,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
+        <TextBox x:Name="NombreTextBox" Text="{Binding Nombres}" HorizontalAlignment="Left" Margin="372,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Height="30"/>
         <Label x:Name="label" Content="Nombre" HorizontalAlignment="Left" Margin="234,119,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Apellidos" HorizontalAlignment="Left" Margin="234,161,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Numero de Mesa" HorizontalAlignment="Left" Margin="234,209,0,0" VerticalAlignment="Top"/>

@@ -19,13 +19,13 @@ namespace Proyecto_FinalAP1.UI.Consultas
     /// </summary>
     public partial class ConsultaPlatillo : Window
     {
-        public string[] combo { get; set; }
+        public string[] combo = new string[] { "Todo", "Id", "Nombre", "Descripcion", "Precio" };
         public ConsultaPlatillo(Usuarios user)
         {
             if (user.NivelUsuario == "Administrador" || user.NivelUsuario == "Gerente")
             {
                 InitializeComponent();
-                combo = new string[] { "Todo", "Id", "Nombre", "Descripcion", "Precio" };
+               
                 FiltroComboBox.ItemsSource = combo;
             }
             else

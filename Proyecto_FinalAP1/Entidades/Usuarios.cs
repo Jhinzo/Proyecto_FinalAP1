@@ -16,6 +16,7 @@ namespace Proyecto_FinalAP1.Entidades
         public string Apellido { get; set; }
         public string Cedula { get; set; }
         public string Telefono { get; set; }
+        public string Email { get; set; }
         public DateTime Fecha { get; set; }
     }
 }

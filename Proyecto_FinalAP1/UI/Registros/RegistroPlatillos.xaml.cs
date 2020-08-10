@@ -19,7 +19,7 @@ namespace Proyecto_FinalAP1.UI.Registros
     /// </summary>
     public partial class RegistroPlatillos : Window
     {
-        Platillos Platillo = new Platillos();
+        Platillos Platillo;
         public RegistroPlatillos( Usuarios usuario)
         {
             if (usuario.NivelUsuario == "Cajero")
@@ -33,6 +33,7 @@ namespace Proyecto_FinalAP1.UI.Registros
             {
                 InitializeComponent();
                 this.Platillo = new Platillos();
+                this.DataContext = Platillo;
             }
             
         }
@@ -40,7 +41,7 @@ namespace Proyecto_FinalAP1.UI.Registros
         private void Limpiar()
         {
             this.Platillo = new Platillos();
-            this.DataContext =Platillo;
+            this.DataContext = Platillo;
         }
 
         private bool Validar()

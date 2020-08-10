@@ -33,7 +33,10 @@ namespace Proyecto_FinalAP1.BLL
 
         public static bool Guardar(Facturas Compra)
         {
-            return Insertar(Compra);
+            if (Compra.FacturaId == 0)
+                return Insertar(Compra);
+            else
+                return Modificar(Compra);
         }
 
         private static bool Insertar(Facturas Factura)
